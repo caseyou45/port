@@ -118,16 +118,25 @@ body {
 .about-skills-wrapper {
   display: flex;
   flex-direction: row;
+  gap: 2rem;
+  margin: auto;
+  width: 85%;
+}
+
+.about-skills-wrapper h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
 }
 
 .about-content {
+  border: 3px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
   flex-basis: 50%;
-  padding: 0 2rem;
-  border: 3px solid red;
-
+  padding: 2rem;
 }
 
-.about-content>span {
+.about-content > span {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -137,35 +146,65 @@ body {
   margin-bottom: 3rem;
 }
 
-.about-content>span img {
+.about-content > span img {
   border-radius: 50%;
   height: 8rem;
-
-
 }
 
 .skills-content {
+  border: 3px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  gap: 1rem;
   flex-basis: 50%;
-  padding: 0 2rem;
-  border: 3px solid red;
-
-
+  padding: 2rem;
 }
 
-.about-skills-wrapper h2 {
-  font-size: 2rem;
-  font-weight: normal;
-  text-align: left;
+.skills-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skills-card-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skills-card-icons img {
+  height: 3rem;
 }
 
 @media only screen and (max-width: 950px) {
-
   .about-skills-wrapper {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
   }
 
+  .skills-content {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .skills-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .skills-card-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .projectsWrapper {
