@@ -120,13 +120,18 @@ body {
   flex-direction: row;
   gap: 2rem;
   margin: auto;
-  width: 85%;
 }
 
 .about-skills-wrapper h2 {
   font-size: 2rem;
   font-weight: normal;
   text-align: left;
+}
+.about-skills-wrapper p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 5px auto;
+  text-indent: 2rem;
 }
 
 .about-content {
@@ -157,7 +162,7 @@ body {
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 
   gap: 1rem;
   flex-basis: 50%;
@@ -168,6 +173,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.skills-card-body > span {
+  border-bottom: 1px black solid;
+  box-shadow: 0 4px 2px -2px gray;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .skills-card-icons {
@@ -223,21 +236,19 @@ body {
 
 .projects {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 5rem;
   margin-top: 4rem;
-  max-width: 80%;
 }
 
 .projectCard {
   display: flex;
   flex-direction: row;
   gap: 15px;
-
-  border: 4px solid blue;
-  border-radius: 10px;
-  padding: 1rem;
+  max-width: 30rem;
 }
 
 .projectCardBody {
