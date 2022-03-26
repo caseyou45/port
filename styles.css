@@ -13,7 +13,7 @@ body {
 
 /* Header Styles */
 
-.headerWrapper {
+.header-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,30 +22,24 @@ body {
   min-height: 50vh;
 }
 
-.headerContent {
+.header-content {
   display: flex;
   flex-direction: row;
   gap: 3rem;
 }
 
-.headerContent h1 {
+.header-content h1 {
   font-size: 3rem;
   text-align: left;
 }
 
-.headerContent h2 {
+.header-content h2 {
   font-size: 2.5rem;
   font-weight: normal;
   text-align: left;
 }
 
-h1,
-h2 {
-  margin: 0;
-  text-align: center;
-}
-
-.cardIcons {
+.card-icons {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -53,7 +47,7 @@ h2 {
   gap: 2rem;
 }
 
-.cardIcons a {
+.card-icons a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,203 +58,114 @@ h2 {
   text-decoration: none;
 }
 
-.cardIcons a:first-of-type {
-  border: 3px solid red;
+.card-icons a:first-of-type {
+  border: 3px solid black;
 }
 
-.cardIcons a:nth-of-type(2) {
-  border: 3px solid green;
+.card-icons a:nth-of-type(2) {
+  border: 3px solid black;
 }
 
-.cardIcons a:nth-of-type(3) {
-  border: 3px solid blue;
+.card-icons a:nth-of-type(3) {
+  border: 3px solid black;
 }
 
-.cardIcons img {
+.card-icons img {
   fill: #f1daff;
   height: 3rem;
   margin: 0 1rem;
 }
 
-.cardIcons a:hover,
+.card-icons a:hover,
 .cardIcons a:active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
 }
 
-.iconLabel {
+.i {
   color: black;
   font-size: 1rem;
 }
 
 @media only screen and (max-width: 950px) {
-  .headerWrapper {
+  .header-wrapper {
     align-items: center;
   }
 
-  .headerContent {
+  .header-content {
     flex-direction: column;
     gap: 2rem;
 
     margin-left: 0;
   }
 
-  .headerContent h1 {
+  .header-content h1 {
     text-align: center;
   }
 
-  .headerContent h2 {
+  .header-content h2 {
     text-align: center;
   }
 
-  .cardIcons a {
+  .card-icons a {
     padding: 0.6rem;
   }
 
-  .cardIcons img {
+  .card-icons img {
     height: 2rem;
   }
 }
 
-/* About/Skills Style */
-
-.aboutWrapper {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: flex-start;
-  justify-content: center;
-
-  gap: 2rem;
-  min-height: 50vh;
-}
-
-.aboutContent {
-  gap: 2rem;
-}
-
-.aboutContent span {
+.about-skills-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  margin-bottom: 2rem;
 }
 
-.aboutContent p {
-  font-size: 1.2rem;
-  line-height: 2rem;
+.about-content {
+  flex-basis: 50%;
+  padding: 0 2rem;
+  border: 3px solid red;
+
 }
 
-.aboutImage {
-  border: 4px solid blue;
-  border-radius: 60%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.8);
+.about-content>span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
 
+  margin-bottom: 3rem;
+}
+
+.about-content>span img {
+  border-radius: 50%;
   height: 8rem;
 
-  margin-left: 1.5rem;
-  max-width: 8rem;
-  width: auto;
+
 }
 
-.skillsContent {
+.skills-content {
+  flex-basis: 50%;
+  padding: 0 2rem;
+  border: 3px solid red;
+
+
 }
 
-.skillsContent {
-  border: 1px solid red;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.8);
-  padding: 0.5rem;
-  width: 100%;
+.about-skills-wrapper h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
 }
 
-.skillsCard h2 {
-  margin-top: 2rem;
-  text-align: center;
-}
+@media only screen and (max-width: 950px) {
 
-.skillsCardBody {
-  display: flex;
-  flex-direction: column;
-
-  gap: 2rem;
-  padding: 1rem 2rem;
-}
-
-.skillsCardBody div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  width: 33%;
-}
-
-.skillsCardBody h3 {
-  margin: 0.25rem 0;
-  font-weight: 200;
-}
-
-.skillsCardBody hr {
-  color: #52057b;
-  margin: 0 0 0.5rem;
-  width: 100%;
-}
-
-.skillsCardBody img {
-  display: block;
-  fill: #cc0e74;
-  height: 2.5rem;
-  margin: 1rem auto;
-}
-
-.skillsCardBody span {
-  min-height: 2.5rem;
-}
-
-@media only screen and (max-width: 850px) {
-  .aboutContent {
-    width: 90%;
-  }
-
-  .skillsContent {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .aboutWrapper {
-    display: flex;
+  .about-skills-wrapper {
     flex-direction: column;
-    gap: 5rem;
-  }
-
-  .aboutContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-
-    width: 90%;
+    gap: 2rem;
   }
 
-  .skillsContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: 90%;
-  }
-
-  .skillsCardBody {
-    display: flex;
-    flex-direction: column;
-
-    gap: 1rem;
-    padding: 1rem 2rem;
-  }
-
-  .skillsCardBody div {
-    width: 100%;
-  }
 }
 
 .projectsWrapper {
