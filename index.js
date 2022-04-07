@@ -78,17 +78,17 @@ const blogs = [
 
 blogs.forEach((el) => {
   projectsArea.innerHTML += `
-  <div key=${el.id} class="projectCard">
+  <div key=${el.id} class="project-card">
   <img
     alt=${el.alt}
     src=${el.image}
-    class="projectCardImg"/>
-    <div class="projectCardBody">
+    class="project-card-img"/>
+    <div class="project-card-body">
     <h3>${el.title}</h3>
     <div>
       <p>${el.description}</p>
       <span>${el.tools}</span>
-      <div class="projectCardLinks">
+      <div class="project-card-links">
         <a href=${el.githubURL}>View Code</a>
         <a href=${el.liveURL}>Visit Site</a>
       </div>
