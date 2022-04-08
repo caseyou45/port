@@ -1,0 +1,33 @@
+body {
+    width: 100%;
+    margin: auto;
+    max-width: 1440px;
+    background-color: red;
+}
+
+header img {
+    height: 2rem;
+    width: auto;
+}
+
+main img {
+    height: 2rem;
+    width: auto;
+}
+
+
+@media screen and (max-wdith: 480px) {
+ body {background-color: blue;}
+
+}
+
+@media screen and (min-wdith: 481px) {
+    body {background-color: green;}
+
+}
+
+@media screen and (min-wdith: 769px) {
+    body {background-color: yellow;}
+
+}
+
