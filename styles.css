@@ -1,9 +1,35 @@
 body {
-    width: 100%;
+    background-color: #f6f6f6;
     margin: auto;
     max-width: 1440px;
-    background-color: red;
+    width: 100%;
+
+
 }
+
+
+.content {
+    background-color: white;
+    border: 1px solid #a7d7f9;
+    border-right-width: 0;
+    margin-left: 10%;
+    margin-top: 5%;
+    padding: 2rem 1rem;
+}
+
+
+header>h1 {
+    font-size: 1.8em;
+}
+
+header>h1>span {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+
+
+
 
 header img {
     height: 2rem;
@@ -15,19 +41,30 @@ main img {
     width: auto;
 }
 
+ nav > ol {
+     
+ }
 
-@media screen and (max-wdith: 480px) {
- body {background-color: blue;}
 
-}
-
-@media screen and (min-wdith: 481px) {
-    body {background-color: green;}
-
-}
-
-@media screen and (min-wdith: 769px) {
-    body {background-color: yellow;}
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: blue;
+    }
 
 }
 
+@media only screen and (max-width: 769px) {
+    body {
+        background-color: green;
+    }
+
+}
+
+
+
+/* @media only screen and (min-width: 769px) {
+    body {
+        background-color: yellow;
+    }
+
+} */
