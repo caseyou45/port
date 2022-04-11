@@ -8,7 +8,7 @@ body {
 }
 
 
-.content {
+main {
     background-color: white;
     border: 1px solid #a7d7f9;
     border-right-width: 0;
@@ -17,6 +17,10 @@ body {
     padding: 2rem 1rem;
 }
 
+section {
+    display: flex;
+    flex-direction: row;
+}
 
 header>h1 {
     font-size: 1.8em;
@@ -27,27 +31,38 @@ header>h1>span {
     font-style: italic;
 }
 
-header > nav  {
+header>nav {
     display: flex;
     flex-direction: row;
     gap: 3rem;
 }
 
-a#pro-link {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     gap:.5rem;
-     text-decoration: none;
-     color:black;
-     height: 5rem;
+nav.professional-links {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
 
-     width: 5rem;
 }
 
-a#pro-link:hover {
- box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.5);
+nav.professional-links>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+b {
+    font-weight: bold;
+}
+
+p {
+    margin: .5rem 0;
 }
 
 
@@ -55,30 +70,39 @@ a#pro-link:hover {
 
 
 
-img {
-    height: 2rem;
-    width: auto;
-}
-
-
-
- nav > ol {
-     
- }
-
- 
 .bio-box {
     border: 1px solid #a2a9b1;
     border-spacing: 3px;
     background-color: #f8f9fa;
     color: black;
-    margin: 0.5em 0 0.5em 1em;
-    padding: 0.2em;
-    float: right;
-    clear: right;
+    margin: 0.5rem 0 0.5rem 1rem;
+    padding: .5rem .75rem;
     font-size: 88%;
     line-height: 1.5em;
-    width: 22em;
+    width: 22rem;
+}
+
+.bio-box h2 {
+    text-align: center;
+    margin: .2rem;
+    width: 100%;
+}
+
+.bio-box th {
+    text-align: left;
+
+}
+
+.bio-box td {
+    padding-left: 1rem;
+    width: 60%;
+}
+
+.bio-box img {
+    margin-bottom: 1rem;
+    width: 80%;
+    display: block;
+    margin: .5rem auto 1rem;
 }
 
 
