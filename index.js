@@ -78,24 +78,19 @@ const blogs = [
 
 blogs.forEach((el) => {
   projectsArea.innerHTML += `
-  <div key=${el.id} class="project-card">
-  <img
-    alt=${el.alt}
-    src=${el.image}
-    class="project-card-img"/>
-    <div class="project-card-body">
+  <div key=${el.id} class="project">
     <h3>${el.title}</h3>
-    <div>
-      <p>${el.description}</p>
-      <span>${el.tools}</span>
-      <div class="project-card-links">
-        <a href=${el.githubURL}>View Code</a>
-        <a href=${el.liveURL}>Visit Site</a>
-      </div>
+    <div key=${el.id} class="project-card">
+       <div class="project-card-body">
+          <p>${el.description}</p>
+          <img alt=${el.alt} src=${el.image} class="project-card-img"/>
+          <span>${el.tools}</span>
+           <div class="project-card-links">
+            <a href=${el.githubURL}>View Code</a>
+            <a href=${el.liveURL}>Visit Site</a>
+          </div>
+       </div>
     </div>
-  </div>
-</div>
+ </div>
 `;
 });
-
-console.log(projects);
