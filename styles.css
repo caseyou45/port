@@ -2,10 +2,25 @@ body {
     background-color: #f6f6f6;
     margin: auto;
     max-width: 2000px;
+    padding-top: 5%;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #1a1635;
+}
+
+main {
+    background-color: white;
+    border: 1px solid #4D4C7D;
+    border-right-width: 0;
+    padding: 2%;
+    width: 90vw;
+    float: right;
+
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 /* General */
@@ -14,7 +29,6 @@ h2 {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 1rem 0;
-
 }
 
 h3 {
@@ -32,22 +46,12 @@ b {
 
 
 hr {
-    border: .5px solid black;
+    border: .5px solid #4D4C7D;
+    width: 100%;
 }
 
 
-main {
-    background-color: white;
-    border: 1px solid #a7d7f9;
-    border-right-width: 0;
-    margin-top: 5%;
-    padding: 2rem 0 0 2rem;
-    width: 90%;
-}
 
-section {
-    padding-right: 5%;
-}
 
 /* Header */
 
@@ -60,24 +64,13 @@ header>h1>span {
     font-style: italic;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 3rem;
-}
+
 
 nav {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     gap: 4rem;
-    margin-top: 1rem;
-}
-
-header>a,
-img {
-    height: 4rem;
 }
 
 
@@ -86,10 +79,77 @@ img {
 
 
 nav.professional-info>a>img {
-    height: 5rem;
+    height: 2.5rem;
     width: auto;
 
 
+}
+
+
+
+section.jumbo {
+    background: linear-gradient(to bottom right, #827397, #4D4C7D, #363062);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, .4);
+    color: white;
+    height: auto;
+    padding: 3rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+
+
+}
+
+
+.jumbo-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+
+.jumbo-body img {
+    height: 15rem;
+    width: 35%;
+    object-fit: scale-down;
+}
+
+.jumbo-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-top: 1rem auto;
+}
+
+.jumbo-buttons button {
+    background: none;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 3.5rem;
+    text-align: center;
+    vertical-align: middle;
+    height: 2.5rem;
+    line-height: .6rem;
+    width: 3rem;
+
+}
+
+.jumbo-buttons button:hover,
+.jumbo-buttons button:active {
+    color: hsla(0, 0%, 100%, 0.5);
+    cursor: pointer;
+
+}
+
+.jumbo {
+    line-height: 1.2rem;
 }
 
 /* About */
@@ -100,7 +160,7 @@ nav.professional-info>a>img {
 }
 
 .about-float img {
-    border: 1px solid black;
+    border: 1px solid #4D4C7D;
     filter: grayscale(1);
     float: left;
     height: 15rem;
@@ -117,25 +177,6 @@ nav.professional-info>a>img {
     margin-top: 1rem;
 }
 
-
-.preview-box {
-    border-left: 1px solid black;
-    margin: 0.5rem 0 0.5rem 1rem;
-    padding-left: 10px;
-    width: 22rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    max-height: 50rem;
-}
-
-
-.preview-box img {
-    height: 10rem;
-    margin: 0;
-    width: 10rem;
-}
 
 
 .tools-list {
@@ -191,6 +232,7 @@ nav.professional-info>a>img {
 
 
 .project-card img {
+    border: 1px solid #4D4C7D;
     float: left;
     height: 8rem;
     margin: 0 1rem 0 0;
@@ -208,26 +250,81 @@ nav.professional-info>a>img {
 }
 
 
-
-@media only screen and (max-width: 480px) {
-    body {
-        background-color: blue;
-    }
+.project-card-body>span {
+    font-size: .85rem;
+    font-weight: bold;
 
 }
+
+.project-card-links a {
+    color: #363062;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+
+
+}
+
+.project-card-links a:hover,
+.project-card-links a:active {
+    color: rgba(54, 48, 98, 0.7);
+
+
+
+}
+
+
 
 @media only screen and (max-width: 769px) {
     body {
         background-color: green;
+        justify-content: center;
+
     }
 
+    main {
+        padding: 2%;
+        width: 95vw;
+        float: none;
+
+
+    }
+
+    section.jumbo {
+        padding: 1rem 1rem 2rem;
+
+        width: 90%;
+    }
+
+    .jumbo-body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+    .jumbo-body img {
+        height: 20rem;
+        width: 80%;
+        object-fit: scale-down;
+    }
+
+    .jumbo-card a,
+    p {
+        font-size: .88rem;
+    }
+
+
+    /* .jumbo-decription-control {
+        width: 90%;
+
+    }
+
+    .jumbo-card img {
+        max-width: 100%;
+    } */
 }
 
 
 
-/* @media only screen and (min-width: 769px) {
-    body {
-        background-color: yellow;
-    }
-
-} */
+@media only screen and (max-width: 769px) {}

@@ -1,4 +1,10 @@
 const projectsArea = document.querySelector("#projects");
+const jumbo = document.querySelector("#jumbo");
+const jumboTitle = document.querySelector("#jumbo-title");
+const jumboImage = document.querySelector("#jumbo-image");
+const jumboParagraph = document.querySelector("#jumbo-paragraph");
+
+let pickedJumboPreview = 0;
 
 const blogs = [
   {
@@ -14,6 +20,7 @@ const blogs = [
     alt: "Screenshot of the website Folded Note",
     githubURL: "https://github.com/caseyou45/FoldedNote",
     liveURL: "https://folded-note.herokuapp.com",
+    gif: "./images/note-gif.gif",
   },
 
   {
@@ -73,6 +80,7 @@ const blogs = [
     alt: "",
     githubURL: "https://github.com/caseyou45/lunar-lander",
     liveURL: "https://caseyou45.github.io/lunar-lander/",
+    gif: "./images/lander-gif.gif",
   },
 ];
 
@@ -94,3 +102,29 @@ blogs.forEach((el) => {
  </div>
 `;
 });
+
+const moveJumboLeft = () => {
+  if (pickedJumboPreview == 0) {
+    pickedJumboPreview = blogs.length - 1;
+  } else {
+    pickedJumboPreview--;
+  }
+  jumboImage.src = blogs[pickedJumboPreview].gif;
+  jumboParagraph.innerHTML = blogs[pickedJumboPreview].description;
+  jumboTitle.innerHTML = blogs[pickedJumboPreview].title;
+};
+
+const moveJumboRight = () => {
+  if (pickedJumboPreview == blogs.length - 1) {
+    pickedJumboPreview = 0;
+  } else {
+    pickedJumboPreview++;
+  }
+  jumboImage.src = blogs[pickedJumboPreview].gif;
+  jumboParagraph.innerHTML = blogs[pickedJumboPreview].description;
+  jumboTitle.innerHTML = blogs[pickedJumboPreview].title;
+};
+
+jumboImage.src = blogs[pickedJumboPreview].gif;
+jumboParagraph.innerHTML = blogs[pickedJumboPreview].description;
+jumboTitle.innerHTML = blogs[pickedJumboPreview].title;
