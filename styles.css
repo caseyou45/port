@@ -2,25 +2,29 @@ body {
   background-color: #f6f6f6;
   margin: auto;
   max-width: 2000px;
-  padding-top: 5%;
   width: 100%;
   font-family: "Open Sans", sans-serif;
   color: #363062;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 main {
   background-color: white;
   border: 1px solid #4d4c7d;
   border-right-width: 0;
-  padding: 2%;
-  width: 90vw;
-  float: right;
+  padding: 2rem;
+  width: 90%;
+  margin-top: 5%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 /* General */
@@ -41,9 +45,8 @@ b {
   font-weight: bold;
 }
 
-hr {
-  border: 0.5px solid #4d4c7d;
-  width: 100%;
+section {
+  width: 90%;
 }
 
 /* Header */
@@ -72,10 +75,9 @@ nav.professional-info > a > img {
 }
 
 section.jumbo {
-  border: 2px solid #4d4c7d;
+  border: 1px solid #4d4c7d;
   color: #363062;
   height: auto;
-  padding: 3rem 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,6 +92,7 @@ section.jumbo {
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 2rem;
+  padding: 1.5rem;
 }
 
 .jumbo-body img {
@@ -104,7 +107,7 @@ section.jumbo {
   display: flex;
   flex-direction: row;
   gap: 4rem;
-  margin-top: 1rem auto;
+  margin: 1rem;
 }
 
 .jumbo-buttons button {
@@ -233,14 +236,19 @@ section.jumbo {
 
 @media only screen and (max-width: 769px) {
   body {
-    justify-content: center;
+    align-items: center;
   }
 
   main {
-    padding: 2%;
-    width: 95vw;
-    float: none;
+    border-width: 0;
+    margin-top: 0;
+    width: 100%;
   }
+
+  section {
+    width: 90%;
+  }
+
   header {
     margin: 1rem 0 0;
   }
